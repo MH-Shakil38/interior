@@ -12,5 +12,28 @@
         <!-- Youtube Video End -->
     </div>
     <!-- Video End -->
-    
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10">
+                <!-- Hero Content Start -->
+                <div class="hero-content">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">geotech interiors</h3>
+                        <h1 class="text-anime-style-2" data-cursor="-opaque">GEOTECH INTERIOR DESIGN & CIVIL CONSULTANCY LTD.</h1>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">We specialize in creating personalized, functional, and stylish interiors that reflect your unique vision.</p>
+                    </div>
+                    <!-- Section Title End -->
+
+                    <!-- Hero Button Start -->
+                    <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="about.html" class="btn-default">explore more</a>
+                        <a href="projects.html" class="btn-default btn-highlighted">view projects</a>
+                    </div>
+                    <!-- Hero Button End -->
+                </div>
+                <!-- Hero Content End -->
+            </div>
+        </div>
+    </div>
 </div>
