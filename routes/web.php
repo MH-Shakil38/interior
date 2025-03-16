@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ImageGalleryController;
-use App\Models\ImageGallery;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +20,12 @@ Route::get('/', function () {
     return view('frontend.home.index');
 });
 
-Auth::routes();
+Route::get('/migrate', function () {
+    return Artisan::call('migrate');
+});
 
+Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('images', ImageGalleryController::class);
+Route::prefix('admin')->group(function () {
+    Route::resource('images', ImageGalleryController::class);
+});

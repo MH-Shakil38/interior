@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ImageGallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ImageGalleryController extends Controller
 {
@@ -12,7 +13,8 @@ class ImageGalleryController extends Controller
      */
     public function index()
     {
-        return view('admin.images.index');
+        $data['images'] = ImageGallery::query()->latest()->get();
+        return view('admin.images.index')->with($data);
     }
 
     /**
@@ -28,7 +30,35 @@ class ImageGalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        try{
+            DB::beginTransaction();
+            if($pictures =$request->hasFile("images")) {
+                foreach ($request['images'] as $file) {
+                    $data['title'] = $request->title;
+                    $data['image'] = url(self::uploadImage($file, 'project/image/'));
+                    ImageGallery::query()->create($data);
+                }
+            }
+
+            DB::commit();
+            return redirect()->back()->with('success','Successfully Image uploaded');
+        }catch(\Throwable $e){
+            DB::rollBack();
+            dd($e);
+            return redirect()->back()->with('error','Error Image uploaded');
+        }
+    }
+
+    public static function uploadImage($file, $path)
+    {
+        if ($file != null) {
+            $imageName = $path . time() . '.' . $file->getClientOriginalName();
+            $file->move(public_path($path), $imageName);
+            return $imageName;
+        } else {
+            return null;
+        }
     }
 
     /**
