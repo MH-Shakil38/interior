@@ -130,7 +130,7 @@
                                 <div class="form-group form-primary">
                                     <input type="eamil" name="email" class="form-control" required="">
                                     <span class="form-bar"></span>
-                                    <label class="form-label float-label">Username</label>
+                                    <label class="form-label float-label">{!! Form::email($name, $value, [$options]) !!}</label>
                                 </div>
                                 <div class="form-group form-primary">
                                     <input type="password" name="password" class="form-control" required="">
