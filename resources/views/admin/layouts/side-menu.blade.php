@@ -22,6 +22,15 @@
                     </a>
                 </li>
 
+                <li class="">
+                    <a href="{{ route('company-settings.index') }}" class="waves-effect waves-dark">
+                        <span class="pcoded-micon">
+                            <i class="feather icon-home"></i>
+                        </span>
+                        <span class="pcoded-mtext">Company settings</span>
+                    </a>
+                </li>
+
             </ul>
             <div class="pcoded-navigation-label">Website</div>
             <ul class="pcoded-item pcoded-left-item">

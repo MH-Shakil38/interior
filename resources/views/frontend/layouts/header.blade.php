@@ -33,12 +33,12 @@
                                     <li class="nav-item"><a class="nav-link" href="{{asset('/')}}404.html">404</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="{{asset('/')}}contact.html">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact Us</a></li>
                         </ul>
                     </div>
                     <!-- Header Btn Start -->
                     <div class="header-btn d-inline-flex">
-                        <a href="{{asset('/')}}contact.html" class="btn-default">get in touch</a>
+                        <a href="{{ route('contact') }}" class="btn-default">get in touch</a>
                     </div>
                     <!-- Header Btn End -->
                 </div>

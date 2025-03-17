@@ -27,8 +27,8 @@
 
                     <!-- Hero Button Start -->
                     <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
-                        <a href="about.html" class="btn-default">explore more</a>
-                        <a href="projects.html" class="btn-default btn-highlighted">view projects</a>
+                        <a href="{{ route('about') }}" class="btn-default">explore more</a>
+                        <a href="{{ route('about') }}" class="btn-default btn-highlighted">view projects</a>
                     </div>
                     <!-- Hero Button End -->
                 </div>
