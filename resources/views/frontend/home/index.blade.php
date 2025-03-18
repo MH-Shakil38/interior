@@ -1,5 +1,8 @@
 @extends('frontend.layouts.app')
 @section('content')
+    @php
+        $company = company();
+    @endphp
     <!-- Hero Section Start -->
     @include('frontend.home.section.hero')
     <!-- Hero Section End -->

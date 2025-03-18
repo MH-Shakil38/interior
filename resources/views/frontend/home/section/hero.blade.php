@@ -19,9 +19,9 @@
                 <div class="hero-content">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">geotech interiors</h3>
-                        <h1 class="text-anime-style-2" data-cursor="-opaque">GEOTECH INTERIOR DESIGN & CIVIL CONSULTANCY LTD.</h1>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">We specialize in creating personalized, functional, and stylish interiors that reflect your unique vision.</p>
+                        <h3 class="wow fadeInUp">{{ $company->short_name }}</h3>
+                        <h1 class="text-anime-style-2" data-cursor="-opaque">{{ $company->name }}</h1>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">{{ $company->title }}</p>
                     </div>
                     <!-- Section Title End -->
 

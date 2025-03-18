@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="about-contact-content">
                                     <p>need any help?</p>
-                                    <h3>01747783913</h3>
+                                    <h3>{{ $company->phone }}</h3>
                                 </div>
                             </div>
                             <!-- About Contact Item End -->
@@ -87,11 +87,11 @@
                             <div class="about-contact-item wow fadeInUp" data-wow-delay="0.6s">
                                 <div class="icon-box">
                                     <figure class="image-anime">
-                                        <img src="{{asset('/')}}images/author-1.jpg" alt="">
+                                        <img src="{{$company->ceo_image}}" alt="">
                                     </figure>
                                 </div>
                                 <div class="about-contact-content">
-                                    <h3>ENG. Shaamanullah Arman </h3>
+                                    <h3>{{$company->ceo_name}} </h3>
                                     <p>co founder</p>
                                 </div>
                             </div>

@@ -3,7 +3,7 @@
         <nav class="container">
             <div class="navbar navbar-expand-lg">
                 <!-- Logo Start -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ company()->logo }}">
                     <img src="{{asset('logo.png')}}" height="60" alt="Logo">
                 </a>
                 <!-- Logo End -->

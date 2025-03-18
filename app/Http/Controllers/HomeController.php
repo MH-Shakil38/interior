@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -16,11 +17,22 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+    public function deleteRecord(Request $request)
+    {
+        try {
+            DB::beginTransaction();
+            $request = request();
+            $model = 'App\Models\\' . $request->model;
+            $record = $model::query()->findOrFail($request->id);
+            $record->delete();
+            DB::commit();
+            return redirect()->back()->with('success', 'Record Delete Successfully');
+        } catch (\Throwable $e) {
+            return redirect()->back()->with('error', 'Somting Wrong' . $e);
+        }
+    }
+
+
     public function index()
     {
         return view('admin.dashboard.index');
