@@ -50,6 +50,13 @@
                                     <input type="text" name="title" class="form-control" value="{{ old('title', $info->title ?? '') }}">
                                 </div>
                             </div>
+
+                            <div class="row mb-3">
+                                <label class="col-sm-3 col-form-label">Phone</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="phone1" class="form-control" value="{{ old('phone1', $info->phone1 ?? '') }}">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -140,7 +147,7 @@
                                 <div class="col-sm-9">
                                     <input type="file" name="ceo_image" class="form-control">
                                     @if(isset($info->ceo_image))
-                                        <img src="{{ asset('storage/'.$info->ceo_image) }}" alt="CEO Image" width="100">
+                                        <img src="{{ $info->ceo_image }}" alt="CEO Image" width="100">
                                     @endif
                                 </div>
                             </div>

@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="about-contact-content">
                                     <p>need any help?</p>
-                                    <h3>{{ $company->phone }}</h3>
+                                    <h3>{{ $company->phone1 }}</h3>
                                 </div>
                             </div>
                             <!-- About Contact Item End -->
