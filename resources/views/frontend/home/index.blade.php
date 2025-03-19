@@ -11,6 +11,8 @@
     @include('frontend.home.section.about')
     <!-- About Us Section End -->
 
+    @include('frontend.home.section.image-gallery')
+
     <!-- Why Choose Us Section Start -->
     @include('frontend.home.section.choose')
     <!-- Why Choose Us Section End -->

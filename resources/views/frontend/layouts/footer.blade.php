@@ -20,9 +20,9 @@
                                     <h3>follow our socials</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="{{asset('/')}}#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="{{asset('/')}}#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                    <li><a href="{{asset('/')}}#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="{{ @$company->facebook }}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="{{ @$company->youtube }}" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                             <!-- Footer Social Link End -->
@@ -72,7 +72,15 @@
                             <i class="fa-solid fa-phone"></i>
                         </div>
                         <div class="footer-contact-content">
-                            <p>+1 (213) 465 789</p>
+                            <p>{{ $company->phone1 }}</p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="footer-contact-content">
+                            <p>{{ $company->phone2 }}</p>
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
@@ -83,7 +91,7 @@
                             <i class="fa-solid fa-envelope"></i>
                         </div>
                         <div class="footer-contact-content">
-                            <p>info@domain.com</p>
+                            <p>{{ @$company->email }}</p>
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
@@ -94,7 +102,7 @@
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <div class="footer-contact-content">
-                            <p>Generała Ziętka Jerzego 54, Mysłowice 41-412</p>
+                            <p>{{ $company->address }}</p>
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
@@ -128,7 +136,13 @@
                 <div class="col-md-12">
                     <!-- Footer Copyright Start -->
                     <div class="footer-copyright-text">
-                        <p>Copyright © 2024 All Rights Reserved.</p>
+                        <p>Copyright ©geotechinteriordesign 2024 All Rights Reserved.</p>
+                    </div>
+                    <!-- Footer Copyright End -->
+
+                     <!-- Footer Copyright Start -->
+                     <div class="footer-copyright-text">
+                        <p>Develop By : <a href="https://www.facebook.com/maynuddin.shakil">Maynuddin Hasan Shakil.</a> </p>
                     </div>
                     <!-- Footer Copyright End -->
                 </div>

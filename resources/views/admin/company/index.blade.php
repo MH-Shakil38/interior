@@ -57,6 +57,13 @@
                                     <input type="text" name="phone1" class="form-control" value="{{ old('phone1', $info->phone1 ?? '') }}">
                                 </div>
                             </div>
+
+                            <div class="row mb-3">
+                                <label class="col-sm-3 col-form-label">Address</label>
+                                <div class="col-sm-9">
+                                    <textarea name="address" id="" class="form-control" cols="30" rows="3">{{ old('address', $info->address ?? '') }}</textarea>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
