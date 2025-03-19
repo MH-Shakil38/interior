@@ -3,6 +3,7 @@
 use App\Http\Controllers\CompanySettingController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImageGalleryController;
+use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
@@ -17,21 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.home.index');
-});
-
-Route::get('/about', function () {
-    return view('frontend.about');
-})->name('about');
-
-Route::get('/contact', function () {
-    return view('frontend.contact');
-})->name('contact');
-
-Route::get('/migrate', function () {
-    return Artisan::call('migrate');
-});
+Route::get('/',[WebsiteController::class,'home']);
+Route::get('/about',[WebsiteController::class, 'about'])->name('about');
+Route::get('/contact',[WebsiteController::class, 'contact'])->name('contact');
+Route::get('/migrate', [WebsiteController::class, 'migrate']);
+Route::get('/image-gallery', [WebsiteController::class, 'imageGallery'])->name('image.gallery');
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

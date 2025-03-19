@@ -1,3 +1,6 @@
+@php
+    $company = company();
+@endphp
 <footer class="main-footer">
     <div class="container">
         <div class="row">
