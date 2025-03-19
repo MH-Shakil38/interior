@@ -22,7 +22,7 @@
         </div>
         <!-- gallery section start -->
         <div class="row gallery-items page-gallery-box">
-            @forelse (images()->slice(0,7) as $info)
+            @forelse (images()->slice(0,9) as $info)
                 <div class="col-lg-4 col-6">
                     <!-- image gallery start -->
                     <div class="photo-gallery wow fadeInUp" data-cursor-text="View">
