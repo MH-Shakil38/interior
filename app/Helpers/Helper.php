@@ -2,6 +2,7 @@
 
 use App\Models\CompanySetting;
 use App\Models\ImageGallery;
+use App\Models\VideoGallery;
 
     if(!function_exists('company')){
         function company(){
@@ -12,6 +13,12 @@ use App\Models\ImageGallery;
     if(!function_exists('images')){
         function images(){
             return ImageGallery::query()->latest()->get();
+        }
+    }
+
+    if(!function_exists('videos')){
+        function videos(){
+            return VideoGallery::query()->latest()->get();
         }
     }
 

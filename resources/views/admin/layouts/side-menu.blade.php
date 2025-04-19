@@ -5,16 +5,16 @@
             <ul class="pcoded-item pcoded-left-item">
 
                 <li class="">
-                    <a href="#" class="waves-effect waves-dark">
+                    <a href="{{ url('/') }}" target="_blank" class="waves-effect waves-dark">
                         <span class="pcoded-micon">
                             <i class="feather icon-home"></i>
                         </span>
-                        <span class="pcoded-mtext">Home</span>
+                        <span class="pcoded-mtext">Website</span>
                     </a>
                 </li>
 
                 <li class="">
-                    <a href="#" class="waves-effect waves-dark">
+                    <a href="{{ url('home') }}" class="waves-effect waves-dark">
                         <span class="pcoded-micon">
                             <i class="feather icon-home"></i>
                         </span>
@@ -53,7 +53,7 @@
                 </li>
 
                 <li class="">
-                    <a href="#" class="waves-effect waves-dark">
+                    <a href="{{ route('video-galleries.index') }}" class="waves-effect waves-dark">
                         <span class="pcoded-micon">
                             <i class="feather icon-home"></i>
                         </span>

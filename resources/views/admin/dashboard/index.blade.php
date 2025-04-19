@@ -29,7 +29,7 @@
         <div class="row g-3">
             <!-- ফিচার আইটেম -->
             <div class="col-md-3 col-sm-6 col-lg-3">
-                <a href="">
+                <a href="{{ route('company-settings.index') }}">
                     <div class="feature-box bg-info text-white">
                         <img src="https://cdn-icons-png.flaticon.com/128/3081/3081059.png" alt="compoany setting">
                         <h5>Company setting</h5>

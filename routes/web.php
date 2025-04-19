@@ -3,6 +3,7 @@
 use App\Http\Controllers\CompanySettingController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImageGalleryController;
+use App\Http\Controllers\VideoGalleryController;
 use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,22 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::prefix('admin')->group(function () {
     Route::resource('images', ImageGalleryController::class);
+    Route::resource('video-galleries', VideoGalleryController::class);
     Route::resource('company-settings', CompanySettingController::class);
     Route::get('/delete-record',[HomeController::class,'deleteRecord'])->name('delete.record');
+});
+
+
+Route::get('/migration-geo', function () {
+    Artisan::call('migrate', ['--force' => true]);
+    return '✅ Migration run successfully!';
+});
+
+Route::get('/clear-cache', function () {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('route:clear');
+    Artisan::call('view:clear');
+    Artisan::call('optimize:clear');
+    return '✅ All cache cleared successfully!';
 });

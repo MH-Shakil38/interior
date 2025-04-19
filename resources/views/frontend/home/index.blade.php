@@ -12,6 +12,7 @@
     <!-- About Us Section End -->
 
     @include('frontend.home.section.image-gallery')
+    @include('frontend.home.section.videos')
 
     <!-- Why Choose Us Section Start -->
     @include('frontend.home.section.choose')
