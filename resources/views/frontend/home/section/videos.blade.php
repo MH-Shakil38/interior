@@ -23,7 +23,7 @@
         <!-- gallery section start -->
         <div class="row gallery-items page-gallery-box">
             @forelse (videos()->slice(0,9) as $info)
-                <div class="col-lg-6 col-6">
+                <div class="col-lg-6 col-sm-12">
                     <!-- video gallery start -->
                     <div class="photo-gallery" data-cursor-text="View">
                             <figure class="">
